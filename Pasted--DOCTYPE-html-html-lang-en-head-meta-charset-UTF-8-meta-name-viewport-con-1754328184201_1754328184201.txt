@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raghav Duggal | Strategic HR Business Partner</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-color: #fca5a5; /* Red-300 */
+            --background-color: #0F172A; /* Slate-900 */
+            --text-color: #E2E8F0; /* Slate-200 */
+            --accent-color: #F87171; /* Red-500 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Generic animation for scroll-triggered elements */
+        .animate-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .animate-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Specific animation for numbers */
+        .animated-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .animated-number-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #94A3B8; /* Slate-400 */
+        }
+
+        .animated-number-container:hover .animated-number {
+            transform: scale(1.05);
+        }
+
+        /* Timeline styles */
+        .timeline-container {
+            position: relative;
+            padding-left: 20px;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #475569; /* Slate-600 */
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            border: 4px solid var(--background-color);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200">
+
+    <!-- Header Section -->
+    <header class="py-8 bg-slate-800 shadow-xl rounded-b-3xl">
+        <div class="section-container text-center">
+            <h1 class="text-6xl md:text-8xl font-extrabold text-white animate-in" style="transition-delay: 0.2s;">Raghav Duggal</h1>
+            <p class="text-xl md:text-2xl mt-2 text-slate-400 animate-in" style="transition-delay: 0.4s;">Strategic HR Business Partner | Talent & Training Specialist</p>
+            <div class="flex flex-col md:flex-row justify-center items-center mt-6 space-y-4 md:space-y-0 md:space-x-8 animate-in" style="transition-delay: 0.6s;">
+                <a href="mailto:raghavdxduggal@gmail.com" class="text-slate-300 hover:text-red-300 transition-colors duration-300">raghavdxduggal@gmail.com</a>
+                <a href="https://linkedin.com/in/raghavduggal" target="_blank" class="text-slate-300 hover:text-red-300 transition-colors duration-300">
+                    <svg class="w-6 h-6 inline-block mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.23 0H1.77C.79 0 0 .77 0 1.73v20.54c0 .96.79 1.73 1.77 1.73h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0zM7.17 20.43H3.94V9.09h3.23v11.34zM5.55 7.64c-1.12 0-2.03-.91-2.03-2.03s.91-2.03 2.03-2.03c1.12 0 2.03.91 2.03 2.03s-.91 2.03-2.03 2.03zM20.43 20.43h-3.23v-5.46c0-1.3-.47-2.18-1.63-2.18-.89 0-1.42.6-1.65 1.18-.08.2-.1.49-.1.78v5.68h-3.23s.04-10.42 0-11.34h3.23v1.65c.43-.78 1.45-1.89 3.01-1.89 2.19 0 3.82 1.44 3.82 4.54v7.04z"/>
+                    </svg>
+                    linkedin.com/in/raghavduggal
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Professional Summary Section -->
+    <section id="summary" class="section-container py-16 animate-in">
+        <h2 class="text-5xl font-bold text-red-300 mb-8">Professional Summary</h2>
+        <p class="text-lg leading-relaxed text-slate-300">
+            A results-driven HR professional with over 13 years of experience specializing in HR Business Partnering, Talent Acquisition, and Training & Development. Proven ability to align HR strategies with organizational goals, fostering growth in dynamic sectors like EduTech, Retail, and IT. Adept at leveraging modern AI tools, including <span class="font-bold text-red-300">Gemini Pro</span>, <span class="font-bold text-red-300">Google AI Studio</span>, and <span class="font-bold text-red-300">ChatGPT</span>, to streamline HR processes, enhance data-driven decision-making, and significantly reduce time-to-hire. A strategic leader dedicated to building high-performing teams and robust HR frameworks.
+        </p>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section-container py-16 animate-in">
+        <h2 class="text-5xl font-bold text-red-300 mb-8">By the Numbers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div class="animated-number-container p-6 rounded-xl bg-slate-800 shadow-lg transition-transform duration-300 hover:scale-105">
+                <div class="animated-number" data-target="1400">0</div>
+                <div class="animated-number-label mt-2">Roles Closed</div>
+            </div>
+            <div class="animated-number-container p-6 rounded-xl bg-slate-800 shadow-lg transition-transform duration-300 hover:scale-105">
+                <div class="animated-number" data-target="10000">0</div>
+                <div class="animated-number-label mt-2">Candidates Interviewed</div>
+            </div>
+            <div class="animated-number-container p-6 rounded-xl bg-slate-800 shadow-lg transition-transform duration-300 hover:scale-105">
+                <div class="animated-number" data-target="350">0</div>
+                <div class="animated-number-label mt-2">Campuses Led Talks At</div>
+            </div>
+            <div class="animated-number-container p-6 rounded-xl bg-slate-800 shadow-lg transition-transform duration-300 hover:scale-105">
+                <div class="animated-number" data-target="21">0</div>
+                <div class="animated-number-label mt-2">Team Members Mentored</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-container py-16 animate-in">
+        <h2 class="text-5xl font-bold text-red-300 mb-8">Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <!-- Skill Card -->
+            <div class="p-6 rounded-xl bg-slate-800 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:bg-red-500">
+                <div class="text-2xl font-bold">HR Strategy & HRBP</div>
+            </div>
+            <div class="p-6 rounded-xl bg-slate-800 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:bg-red-500">
+                <div class="text-2xl font-bold">Talent Acquisition</div>
+            </div>
+            <div class="p-6 rounded-xl bg-slate-800 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:bg-red-500">
+                <div class="text-2xl font-bold">Training & Development</div>
+            </div>
+            <div class="p-6 rounded-xl bg-slate-800 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:bg-red-500">
+                <div class="text-2xl font-bold">AI in HR</div>
+            </div>
+            <div class="p-6 rounded-xl bg-slate-800 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:bg-red-500">
+                <div class="text-2xl font-bold">Team Leadership</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section (Timeline) -->
+    <section id="experience" class="section-container py-16 animate-in">
+        <h2 class="text-5xl font-bold text-red-300 mb-8">Work Experience</h2>
+        <div class="timeline-container">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item animate-in" style="transition-delay: 0.2s;">
+                <div class="p-6 rounded-xl bg-slate-800 shadow-lg">
+                    <h3 class="text-3xl font-bold text-red-300">Altruist Technologies Pvt. Ltd.</h3>
+                    <p class="text-lg font-semibold mt-1 text-slate-400">Regional Manager - HR & Talent Acquisition</p>
+                    <p class="text-sm italic text-slate-500">08/2023 - Present</p>
+                    <ul class="list-disc list-inside mt-4 space-y-1 text-slate-300">
+                        <li>Served as the primary HRBP for 5 states, managing employee relations, performance management, and strategic HR initiatives.</li>
+                        <li>Led end-to-end talent acquisition; reduced time-to-hire by 65% by closing 28 key positions in 9 days.</li>
+                        <li>Utilized AI tools (Google AI Studio, Perplexity, ChatGPT) to automate report generation, analyze hiring metrics, and create JDs, reducing administrative time by 40%.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item animate-in" style="transition-delay: 0.4s;">
+                <div class="p-6 rounded-xl bg-slate-800 shadow-lg">
+                    <h3 class="text-3xl font-bold text-red-300">AJ Jewellers</h3>
+                    <p class="text-lg font-semibold mt-1 text-slate-400">Talent Acquisition Manager & HRBP</p>
+                    <p class="text-sm italic text-slate-500">06/2022 - 08/2023</p>
+                    <ul class="list-disc list-inside mt-4 space-y-1 text-slate-300">
+                        <li>Managed pan-India hiring, successfully recruiting 150+ candidates via diverse sourcing channels.</li>
+                        <li>Mentored a 7-member team, consistently exceeding performance KPIs.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item animate-in" style="transition-delay: 0.6s;">
+                <div class="p-6 rounded-xl bg-slate-800 shadow-lg">
+                    <h3 class="text-3xl font-bold text-red-300">UpGrad</h3>
+                    <p class="text-lg font-semibold mt-1 text-slate-400">Talent Acquisition Manager</p>
+                    <p class="text-sm italic text-slate-500">10/2021 - 06/2022</p>
+                    <ul class="list-disc list-inside mt-4 space-y-1 text-slate-300">
+                        <li>Recruited over 450 candidates for Sales, Marketing & Finance roles.</li>
+                        <li>Executed successful campus hiring programs and led a team of 4 recruiters.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="section-container py-16 animate-in">
+        <h2 class="text-5xl font-bold text-red-300 mb-8">Languages</h2>
+        <div class="flex flex-wrap gap-4">
+            <!-- Language Cards -->
+            <div class="p-4 rounded-full bg-slate-800 hover:bg-red-500 transition-colors duration-300 cursor-pointer shadow-lg">English</div>
+            <div class="p-4 rounded-full bg-slate-800 hover:bg-red-500 transition-colors duration-300 cursor-pointer shadow-lg">Hindi</div>
+            <div class="p-4 rounded-full bg-slate-800 hover:bg-red-500 transition-colors duration-300 cursor-pointer shadow-lg">Bengali</div>
+            <div class="p-4 rounded-full bg-slate-800 hover:bg-red-500 transition-colors duration-300 cursor-pointer shadow-lg">Punjabi</div>
+            <div class="p-4 rounded-full bg-slate-800 hover:bg-red-500 transition-colors duration-300 cursor-pointer shadow-lg">ISL</div>
+            <div class="p-4 rounded-full bg-slate-800 hover:bg-red-500 transition-colors duration-300 cursor-pointer shadow-lg">Spanish (A1)</div>
+            <div class="p-4 rounded-full bg-slate-800 hover:bg-red-500 transition-colors duration-300 cursor-pointer shadow-lg">Korean (Basic)</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-container py-16 animate-in">
+        <h2 class="text-5xl font-bold text-red-300 mb-8">Get in Touch</h2>
+        <form class="p-8 bg-slate-800 rounded-xl shadow-lg max-w-2xl mx-auto">
+            <div class="mb-4">
+                <label for="name" class="block text-slate-300 mb-2">Name</label>
+                <input type="text" id="name" class="w-full p-3 rounded-lg bg-slate-900 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Your Name">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-slate-300 mb-2">Email</label>
+                <input type="email" id="email" class="w-full p-3 rounded-lg bg-slate-900 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="your@email.com">
+            </div>
+            <div class="mb-6">
+                <label for="message" class="block text-slate-300 mb-2">Message</label>
+                <textarea id="message" rows="5" class="w-full p-3 rounded-lg bg-slate-900 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Your message..."></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="w-full md:w-auto px-8 py-3 bg-red-500 text-white rounded-lg font-bold hover:bg-red-600 transition-colors duration-300 shadow-md">Send Message</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-800 text-center text-slate-400 text-sm rounded-t-3xl">
+        <p>&copy; 2025 Raghav Duggal. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Animations -->
+    <script>
+        // Scroll-triggered animations for sections
+        const animateInElements = document.querySelectorAll('.animate-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animateInElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Number counting animation for achievements
+        const numbers = document.querySelectorAll('.animated-number');
+
+        const animateNumber = (element) => {
+            const target = +element.getAttribute('data-target');
+            const duration = 2000; // milliseconds
+            const stepTime = 10; // milliseconds
+            const steps = duration / stepTime;
+            const increment = target / steps;
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, stepTime);
+        };
+
+        const numberObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const numberElements = entry.target.querySelectorAll('.animated-number');
+                    numberElements.forEach(num => {
+                        animateNumber(num);
+                    });
+                    numberObserver.unobserve(entry.target); // Unobserve after animating once
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.getElementById('achievements').addEventListener('DOMNodeInserted', (event) => {
+            if (event.target.classList && event.target.classList.contains('animated-number-container')) {
+                numberObserver.observe(document.getElementById('achievements'));
+            }
+        });
+
+        // Initially observe the achievements section
+        numberObserver.observe(document.getElementById('achievements'));
+    </script>
+</body>
+</html>

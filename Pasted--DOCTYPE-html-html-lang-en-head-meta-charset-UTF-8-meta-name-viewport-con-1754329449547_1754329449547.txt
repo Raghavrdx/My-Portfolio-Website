@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raghav Duggal | Strategic HR Business Partner</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-color: #fca5a5; /* Red-300 */
+            --background-color: #0F172A; /* Slate-900 */
+            --text-color: #E2E8F0; /* Slate-200 */
+            --accent-color: #F87171; /* Red-500 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #1e293b, #0f172a, #1e293b);
+            background-size: 300% 300%;
+            animation: gradient-animation 20s ease infinite;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Generic animation for scroll-triggered elements */
+        .animate-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .animate-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Specific animation for numbers */
+        .animated-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .animated-number-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #94A3B8; /* Slate-400 */
+        }
+
+        .animated-number-container:hover .animated-number {
+            transform: scale(1.05);
+        }
+
+        /* Timeline styles */
+        .timeline-container {
+            position: relative;
+            padding-left: 20px;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #475569; /* Slate-600 */
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            border: 4px solid var(--background-color);
+        }
+
+        /* Tab content styles */
+        .tab-content {
+            display: none;
+            animation: fade-in 0.5s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200">
+
+    <!-- Header Section -->
+    <header class="py-8 bg-slate-800 shadow-xl rounded-b-3xl relative z-10">
+        <div class="section-container text-center">
+            <h1 class="text-6xl md:text-8xl font-extrabold text-white animate-in" style="transition-delay: 0.2s;">Raghav Duggal</h1>
+            <p class="text-xl md:text-2xl mt-2 text-slate-400 animate-in" style="transition-delay: 0.4s;">Strategic HR Business Partner | Talent & Training Specialist</p>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="sticky top-0 bg-slate-800/80 backdrop-blur-md z-20 shadow-lg mb-8">
+        <div class="section-container flex justify-center space-x-4 md:space-x-8 py-4">
+            <button class="tab-button px-4 py-2 font-bold text-lg text-slate-400 border-b-4 border-transparent hover:text-red-300 hover:border-red-300 transition-all duration-300" data-tab="summary-tab">Summary</button>
+            <button class="tab-button px-4 py-2 font-bold text-lg text-slate-400 border-b-4 border-transparent hover:text-red-300 hover:border-red-300 transition-all duration-300" data-tab="experience-tab">Experience</button>
+            <button class="tab-button px-4 py-2 font-bold text-lg text-slate-400 border-b-4 border-transparent hover:text-red-300 hover:border-red-300 transition-all duration-300" data-tab="skills-tab">Skills</button>
+            <button class="tab-button px-4 py-2 font-bold text-lg text-slate-400 border-b-4 border-transparent hover:text-red-300 hover:border-red-300 transition-all duration-300" data-tab="achievements-tab">Achievements</button>
+        </div>
+    </nav>
+    
+    <main class="section-container relative z-10">
+        <!-- Professional Summary Section (Tab Content) -->
+        <section id="summary-tab" class="tab-content active py-16 animate-in">
+            <h2 class="text-5xl font-bold text-red-300 mb-8">Professional Summary</h2>
+            <p class="text-lg leading-relaxed text-slate-300">
+                With over 13 years of dedicated experience in Human Resources, my career is defined by a strategic focus on aligning people with business objectives. I am a results-driven professional who specializes in HR Business Partnering, Talent Acquisition, and Training & Development across dynamic sectors like EduTech, Retail, and IT. My expertise lies in building and leading high-performing teams, creating robust HR frameworks, and leveraging modern AI tools to drive efficiency. I have a proven track record of significantly reducing administrative overhead and time-to-hire by integrating cutting-edge technologies like <span class="font-bold text-red-300">Gemini Pro</span>, <span class="font-bold text-red-300">Google AI Studio</span>, and <span class="font-bold text-red-300">ChatGPT</span> into daily operations, demonstrating a forward-thinking approach to HR management.
+            </p>
+            <p class="text-lg leading-relaxed text-slate-300 mt-4">
+                My professional journey is a testament to my ability to adapt and excel in diverse environments, from hospitality to cutting-edge technology. I am dedicated to fostering growth, building talent pipelines, and creating human-centric strategies that deliver tangible business results.
+            </p>
+        </section>
+
+        <!-- Work Experience Section (Tab Content) -->
+        <section id="experience-tab" class="tab-content py-16">
+            <h2 class="text-5xl font-bold text-red-300 mb-8">Work Experience</h2>
+            <div class="timeline-container">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item animate-in" style="transition-delay: 0.2s;">
+                    <div class="p-6 rounded-xl bg-slate-800 shadow-lg">
+                        <h3 class="text-3xl font-bold text-red-300">Altruist Technologies Pvt. Ltd.</h3>
+                        <p class="text-lg font-semibold mt-1 text-slate-400">Regional Manager - HR & Talent Acquisition</p>
+                        <p class="text-sm italic text-slate-500">08/2023 - Present</p>
+                        <ul class="list-disc list-inside mt-4 space-y-1 text-slate-300">
+                            <li>Served as the primary HRBP for 5 states, managing employee relations, performance management, and strategic HR initiatives.</li>
+                            <li>Led end-to-end talent acquisition; reduced time-to-hire by 65% by closing 28 key positions in 9 days.</li>
+                            <li>Utilized AI tools (Google AI Studio, Perplexity, ChatGPT) to automate report generation, analyze hiring metrics, and create JDs, reducing administrative time by 40%.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item animate-in" style="transition-delay: 0.4s;">
+                    <div class="p-6 rounded-xl bg-slate-800 shadow-lg">
+                        <h3 class="text-3xl font-bold text-red-300">AJ Jewellers</h3>
+                        <p class="text-lg font-semibold mt-1 text-slate-400">Talent Acquisition Manager & HRBP</p>
+                        <p class="text-sm italic text-slate-500">06/2022 - 08/2023</p>
+                        <ul class="list-disc list-inside mt-4 space-y-1 text-slate-300">
+                            <li>Managed pan-India hiring, successfully recruiting 150+ candidates via diverse sourcing channels.</li>
+                            <li>Mentored a 7-member team, consistently exceeding performance KPIs.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item animate-in" style="transition-delay: 0.6s;">
+                    <div class="p-6 rounded-xl bg-slate-800 shadow-lg">
+                        <h3 class="text-3xl font-bold text-red-300">UpGrad</h3>
+                        <p class="text-lg font-semibold mt-1 text-slate-400">Talent Acquisition Manager</p>
+                        <p class="text-sm italic text-slate-500">10/2021 - 06/2022</p>
+                        <ul class="list-disc list-inside mt-4 space-y-1 text-slate-300">
+                            <li>Recruited over 450 candidates for Sales, Marketing & Finance roles.</li>
+                            <li>Executed successful campus hiring programs and led a team of 4 recruiters.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section (Tab Content) -->
+        <section id="skills-tab" class="tab-content py-16">
+            <h2 class="text-5xl font-bold text-red-300 mb-8">Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Skill Card -->
+                <div class="p-6 rounded-xl bg-slate-800 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:bg-red-500">
+                    <div class="text-2xl font-bold">HR Strategy & HRBP</div>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-800 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:bg-red-500">
+                    <div class="text-2xl font-bold">Talent Acquisition</div>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-800 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:bg-red-500">
+                    <div class="text-2xl font-bold">Training & Development</div>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-800 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:bg-red-500">
+                    <div class="text-2xl font-bold">AI in HR</div>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-800 shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:bg-red-500">
+                    <div class="text-2xl font-bold">Team Leadership</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section (Tab Content) -->
+        <section id="achievements-tab" class="tab-content py-16">
+            <h2 class="text-5xl font-bold text-red-300 mb-8">By the Numbers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="animated-number-container p-6 rounded-xl bg-slate-800 shadow-lg transition-transform duration-300 hover:scale-105">
+                    <div class="animated-number" data-target="1400">0</div>
+                    <div class="animated-number-label mt-2">Roles Closed</div>
+                </div>
+                <div class="animated-number-container p-6 rounded-xl bg-slate-800 shadow-lg transition-transform duration-300 hover:scale-105">
+                    <div class="animated-number" data-target="10000">0</div>
+                    <div class="animated-number-label mt-2">Candidates Interviewed</div>
+                </div>
+                <div class="animated-number-container p-6 rounded-xl bg-slate-800 shadow-lg transition-transform duration-300 hover:scale-105">
+                    <div class="animated-number" data-target="350">0</div>
+                    <div class="animated-number-label mt-2">Campuses Led Talks At</div>
+                </div>
+                <div class="animated-number-container p-6 rounded-xl bg-slate-800 shadow-lg transition-transform duration-300 hover:scale-105">
+                    <div class="animated-number" data-target="21">0</div>
+                    <div class="animated-number-label mt-2">Team Members Mentored</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 mt-8 bg-slate-800 text-center text-slate-400 text-sm rounded-t-3xl relative z-10">
+        <p>&copy; 2025 Raghav Duggal. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Tabs, Animations, and Counters -->
+    <script>
+        // Tab switching logic
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        function showTab(tabId) {
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            tabButtons.forEach(button => {
+                button.classList.remove('active', 'border-red-300');
+                button.classList.add('border-transparent');
+            });
+
+            const activeTabContent = document.getElementById(tabId);
+            if (activeTabContent) {
+                activeTabContent.classList.add('active');
+            }
+
+            const activeTabButton = document.querySelector(`.tab-button[data-tab="${tabId}"]`);
+            if (activeTabButton) {
+                activeTabButton.classList.add('active', 'border-red-300');
+                activeTabButton.classList.remove('border-transparent');
+            }
+        }
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                showTab(button.dataset.tab);
+            });
+        });
+
+        // Show the first tab by default
+        showTab('summary-tab');
+
+        // Number counting animation for achievements
+        const numbers = document.querySelectorAll('.animated-number');
+        const achievementsTab = document.getElementById('achievements-tab');
+
+        const animateNumber = (element) => {
+            const target = +element.getAttribute('data-target');
+            const duration = 2000; // milliseconds
+            const stepTime = 10; // milliseconds
+            const steps = duration / stepTime;
+            const increment = target / steps;
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, stepTime);
+        };
+
+        let hasAnimated = false;
+        const achievementsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    numbers.forEach(num => animateNumber(num));
+                    hasAnimated = true;
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        achievementsObserver.observe(achievementsTab);
+    </script>
+</body>
+</html>
